@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.alibaba.android.vlayout.DelegateAdapter
 import com.alibaba.android.vlayout.LayoutHelper
 import com.bumptech.glide.Glide
@@ -15,6 +16,7 @@ import com.twtstudio.retrox.news.R
 import com.twtstudio.retrox.news.api.bean.FangcunBean
 import com.twtstudio.retrox.news.api.bean.GalleryIndexBean
 import com.twtstudio.retrox.news.explore.gallery.GalleryActivity
+import es.dmoral.toasty.Toasty
 
 /**
  * Created by retrox on 09/04/2017.
@@ -29,6 +31,7 @@ class GalleryIndexAdapter(val context: Context, val layoutHelper: LayoutHelper, 
             image.setOnClickListener {
                 val intent = Intent(context,GalleryActivity::class.java)
                 intent.putExtra("id",data.id)
+//                Toasty.info(context,"test",Toast.LENGTH_SHORT).show()
                 context.startActivity(intent)
             }
         }
